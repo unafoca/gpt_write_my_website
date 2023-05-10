@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "webpack && node public/bundle.js",
+    "start": "node server.js",
     "build": "webpack",
-    "heroku-postbuild": "webpack"
+    "postinstall": "webpack",
   },
   "keywords": [],
   "author": "",
