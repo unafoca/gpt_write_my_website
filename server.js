@@ -6,7 +6,7 @@ const path = require('path');
 const mime = require('mime');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
 // Replace this with your PostgreSQL connection string
 const connectionString = process.env.postgresql-flat-85578 || 'postgres://user:password@localhost/db_name';
