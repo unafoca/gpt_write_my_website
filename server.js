@@ -5,7 +5,7 @@ const path = require('path');
 const mime = require('mime');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 function initializeDatabase() {
   db.run(`
