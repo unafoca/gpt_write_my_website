@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack && node public/bundle.js"
+    "start": "webpack && node public/bundle.js",
+    "build": "webpack",
+    "heroku-postbuild": "webpack"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,7 @@
     "@babel/preset-env": "^7.21.5",
     "babel-loader": "^9.1.2",
     "webpack": "^5.82.0",
-    "webpack-cli": "^5.1.0",
+    "webpack-cli": "^5.1.1",
     "webpack-node-externals": "^3.0.0"
   }
 }
