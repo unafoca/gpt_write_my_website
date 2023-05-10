@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 
 // Replace this with your PostgreSQL connection string
 // const connectionString = 'process.env.postgresql-flat-85578' || 'postgres://user:password@localhost/db_name';
-const connectionString = process.env.DATABASE_URL
+const connectionString = 'postgres://dcxdfrhanohoeb:aa63a2cb4723b22ae73d33c79becdd7487c8f0452ae9f696ad5b415fe5eb3142@ec2-34-202-127-5.compute-1.amazonaws.com:5432/d9hju6g1v3bou5'
 
 const pool = new Pool({
   connectionString,
