@@ -77,8 +77,7 @@ app.post('/submitData', (req, res) => {
       from: 'cw_pet_proj@zohomail.com', 
       to: email, // Use the submitted email as the recipient
       subject: 'Hello from CW',
-      text: `Chuqiao need to have coconut chicken`,
-      html: 'Embedded image: <img src="cid:unique@kreata.ee"/>',
+      html: 'Here is a bunny: <img src="cid:unique@kreata.ee"/>',
       attachments: [{
           filename: 'image.png',
           path: 'bunny.jpg',
