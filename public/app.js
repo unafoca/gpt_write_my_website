@@ -14,15 +14,15 @@ async function submitData() {
     console.log(data.message);
 
     // Update the "Submitted Data" section
-    const submittedDataList = 'Submitted Data: ' + document.getElementById("submittedData");
+    const submittedDataList = document.getElementById("submittedData");
     const existingListItem = document.getElementById("latestData");
 
     if (existingListItem) {
-      existingListItem.textContent = `${name} is ${age} years old`;
+      existingListItem.textContent = 'Submitted Data: '.concat(`${name} is ${age} years old`);
     } else {
       const listItem = document.createElement("li");
       listItem.id = "latestData";
-      listItem.textContent = `${name} is ${age} years old`;
+      listItem.textContent = 'Submitted Data: '.concat(`${name} is ${age} years old`);
       submittedDataList.appendChild(listItem);
     }
 
