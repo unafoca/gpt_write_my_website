@@ -19,7 +19,7 @@ const pool = new Pool({
 
 function initializeDatabase() {
   pool.query(`
-    CREATE OR REPLACE TABLE users (
+    CREATE TABLE IF NOT EXISTS users (
       id SERIAL PRIMARY KEY,
       name TEXT NOT NULL,
       age INTEGER NOT NULL,
