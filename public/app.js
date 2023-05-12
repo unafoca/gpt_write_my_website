@@ -45,7 +45,9 @@ async function searchAge() {
     console.log(data.message);
     document.getElementById("searchResult").textContent = data.message;
   } else {
-    console.error(`Error: ${response.status}`);
+    const data = await response.json();
+    const errorMessage = response.status === 404 ? `No record found for ${name}` : data.message;
+    document.getElementById("searchResult").textContent = errorMessage;
   }
 }
 
