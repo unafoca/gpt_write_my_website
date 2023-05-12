@@ -18,7 +18,7 @@ async function submitData() {
     const existingListItem = document.getElementById("latestData");
 
     if (existingListItem) {
-      existingListItem.textContent = `${name} is ${age} years old`;
+      existingListItem.textContent = 'Submitted Data: '.concat(`${name} is ${age} years old`);
     } else {
       const listItem = document.createElement("li");
       listItem.id = "latestData";
