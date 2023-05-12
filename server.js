@@ -76,8 +76,14 @@ app.post('/submitData', (req, res) => {
     const mailOptions = {
       from: 'cw_pet_proj@zohomail.com', 
       to: email, // Use the submitted email as the recipient
-      subject: 'Hello from ChatGPT',
+      subject: 'Hello from CW',
       text: `Chuqiao need to have coconut chicken`,
+      html: 'Embedded image: <img src="cid:unique@kreata.ee"/>',
+      attachments: [{
+          filename: 'image.png',
+          path: 'bunny.jpg',
+          cid: 'unique@kreata.ee' //same cid value as in the html img src
+      }]
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
