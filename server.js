@@ -74,8 +74,8 @@ app.post('/submitData', (req, res) => {
     });
 
     const mailOptions = {
-      from: 'cw_pet_proj@zohomail.com', // Replace with your email address
-      to: 'chuqiao.wang.gsm@gmail.com', // Replace with the recipient's email address
+      from: 'cw_pet_proj@zohomail.com', 
+      to: email, // Use the submitted email as the recipient
       subject: 'Data Submission',
       text: `Name: ${name}\nAge: ${age}\nEmail: ${email}`,
     };
