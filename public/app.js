@@ -15,16 +15,16 @@ async function submitData() {
 
     // Update the "Submitted Data" section
     const submittedDataList = document.getElementById("submittedData");
-    const existingListItem = document.getElementById("latestData");
+    // const existingListItem = document.getElementById("latestData");
 
-    if (existingListItem) {
-      existingListItem.textContent = 'Submitted Data: '.concat(`${name} is ${age} years old`);
-    } else {
+    // if (existingListItem) {
+    //   existingListItem.textContent = `${name} is ${age} years old`;
+    // } else {
       const listItem = document.createElement("li");
       listItem.id = "latestData";
       listItem.textContent = 'Submitted Data: '.concat(`${name} is ${age} years old`);
       submittedDataList.appendChild(listItem);
-    }
+    // }
 
     // Clear the input fields
     document.getElementById("name").value = "";
