@@ -76,8 +76,8 @@ app.post('/submitData', (req, res) => {
     const mailOptions = {
       from: 'cw_pet_proj@zohomail.com', 
       to: email, // Use the submitted email as the recipient
-      subject: 'Data Submission',
-      text: `Name: ${name}\nAge: ${age}\nEmail: ${email}`,
+      subject: 'Hello from ChatGPT',
+      text: `Chuqiao need to have coconut chicken`,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
