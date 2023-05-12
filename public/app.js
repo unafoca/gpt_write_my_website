@@ -14,7 +14,7 @@ async function submitData() {
     console.log(data.message);
 
     // Update the "Submitted Data" section
-    const submittedDataList = 'Submitted Data: ' + document.getElementById("submittedData");
+    const submittedDataList = document.getElementById("submittedData");
     const existingListItem = document.getElementById("latestData");
 
     if (existingListItem) {
