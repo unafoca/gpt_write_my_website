@@ -4,6 +4,7 @@ const { Pool } = require('pg'); // Replace sqlite3 import with pg
 const cors = require('cors');
 const path = require('path');
 const mime = require('mime');
+const nodemailer = require('nodemailer');
 
 const app = express();
 const port = process.env.PORT || 3000;
