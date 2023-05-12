@@ -49,6 +49,7 @@ async function searchAge() {
     const errorMessage = response.status === 404 ? `No record found for ${name}` : data.message;
     document.getElementById("searchResult").textContent = errorMessage;
   }
+  document.getElementById("searchName").value = "";
 }
 
 async function clearData() {
