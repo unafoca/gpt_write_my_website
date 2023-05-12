@@ -1,11 +1,12 @@
 async function submitData() {
   const name = document.getElementById("name").value;
   const age = document.getElementById("age").value;
+  const email = document.getElementById("email").value;
 
   const response = await fetch('/submitData', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ name, age }),
+    body: JSON.stringify({ name, age, email}),
   });
 
   if (response.ok) {
@@ -28,6 +29,7 @@ async function submitData() {
     // Clear the input fields
     document.getElementById("name").value = "";
     document.getElementById("age").value = "";
+    document.getElementById("email").value = "";
   } else {
     console.error(`Error: ${response.status}`);
   }

@@ -22,7 +22,8 @@ function initializeDatabase() {
     CREATE TABLE IF NOT EXISTS users (
       id SERIAL PRIMARY KEY,
       name TEXT NOT NULL,
-      age INTEGER NOT NULL
+      age INTEGER NOT NULL,
+      email TEXT NOT NULL
     )
   `, (err) => {
     if (err) {
@@ -51,8 +52,9 @@ app.get('/bundle.js', (req, res) => {
 app.post('/submitData', (req, res) => {
   const name = req.body.name;
   const age = req.body.age;
+  const email = req.body.email;
 
-  pool.query('INSERT INTO users (name, age) VALUES ($1, $2) RETURNING id', [name, age], (err, result) => {
+  pool.query('INSERT INTO users (name, age, email) VALUES ($1, $2, $3) RETURNING id', [name, age, email], (err, result) => {
     if (err) {
       console.log(err.message);
       res.status(500).json({ message: `Failed to insert record. ${err.message}` });
