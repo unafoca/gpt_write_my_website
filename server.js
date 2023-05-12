@@ -64,6 +64,32 @@ app.post('/submitData', (req, res) => {
 
     res.status(200).json({ message: `${name} is ${age} years old` });
   });
+
+const transporter = nodemailer.createTransport({
+      service: 'Gmail',
+      auth: {
+        user: 'chuqiao.wang.gsm@example.com', // Replace with your email address
+        pass: '070123100827', // Replace with your email password or an app-specific password
+      },
+    });
+
+    const mailOptions = {
+      from: 'chuqiao.wang.gsm@example.com', // Replace with your email address
+      to: 'chuqiao.wang.gsm@example.com', // Replace with the recipient's email address
+      subject: 'Data Submission',
+      text: `Name: ${name}\nAge: ${age}\nEmail: ${email}`,
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error('Error sending email:', error);
+      } else {
+        console.log('Email sent:', info.response);
+      }
+    });
+
+    res.status(200).json({ message: `${name} is ${age} years old` });
+  
 });
 
 app.get('/searchAge/:name', (req, res) => {
