@@ -64,17 +64,17 @@ app.post('/submitData', (req, res) => {
     console.log(`A row has been inserted with id ${result.rows[0].id}`);
 
     const transporter = nodemailer.createTransport({
-      host: “smtp.zoho.com”,
+      host: "smtp.zoho.com",
       secure: true,
       port: 465,
       auth: {
         user: "cw_pet_proj@zohomail.com",
         pass: "ann66886688",
-  },
+      },
     });
 
     const mailOptions = {
-      from: 'w_pet_proj@zohomail.com', // Replace with your email address
+      from: 'cw_pet_proj@zohomail.com', // Replace with your email address
       to: 'chuqiao.wang.gsm@gmail.com', // Replace with the recipient's email address
       subject: 'Data Submission',
       text: `Name: ${name}\nAge: ${age}\nEmail: ${email}`,
