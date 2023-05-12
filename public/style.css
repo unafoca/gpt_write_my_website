@@ -12,7 +12,7 @@ form {
 }
 
 label, input {
-    flex: 1;
+    width: 80%; /* Adjust the width of input boxes */
 }
 
 * {
@@ -38,13 +38,14 @@ h1 {
 }
 
 input, button {
-  margin: 5px;
+  margin: 5px auto; /* Center the input boxes and buttons */
   padding: 10px;
   font-size: 1rem;
   border: 1px solid #ccc;
   outline: none;
   border-radius: 5px;
 }
+
 
 button {
   background-color: #3498db;
@@ -62,11 +63,14 @@ button:active {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
+
+
 
 #searchResult {
   color: #333;
