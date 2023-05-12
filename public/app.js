@@ -22,7 +22,7 @@ async function submitData() {
     } else {
       const listItem = document.createElement("li");
       listItem.id = "latestData";
-      listItem.textContent = `'Submitted Data: '.concat(${name} is ${age} years old`);
+      listItem.textContent = 'Submitted Data: '.concat(`${name} is ${age} years old`);
       submittedDataList.appendChild(listItem);
     }
 
